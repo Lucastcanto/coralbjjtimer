@@ -1,0 +1,20 @@
+{
+  "name": "apptempo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js",
+    "package": "electron-packager . MiApp --overwrite --asar=true --platform=win32 --arch=x64 --prune=true --out=dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^27.1.2"
+  },
+  "devDependencies": {
+    "electron-packager": "^17.1.2"
+  }
+}
+
+

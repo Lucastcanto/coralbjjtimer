@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team CORAL BJJ</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .logo {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (min-width: 992px) {
+      .logo {
+        max-width: 80%;
+      }
+    }
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row align-items-center">
+      <!-- Columna izquierda: Logo -->
+      <div class="col-md-4 logo-container">
+        <img src="logo-main.webp" alt="Logo" class="logo img-fluid">
+      </div>
+
+      <!-- Columna derecha: Formulario y Timer -->
+      <div class="col-md-8">
+        <div class="form-timer-sound">
+          <div id="inputs" class="inputs">
+            <div class="form-group">
+              <label for="setTime">Tiempo de Lucha:</label>
+              <input type="text" class="form-control" id="setTime" placeholder="Minutos">
+            </div>
+            <div class="form-group">
+              <label for="setRest">Descanso:</label>
+              <input type="text" class="form-control" id="setRest" placeholder="Segundos">
+            </div>
+            <div class="form-group">
+              <label for="setRounds">Rounds:</label>
+              <input type="text" class="form-control" id="setRounds" placeholder="Cantidad">
+            </div>
+          </div>
+
+          <div id="timerCircle" class="timer-container text-center">
+            <div class="rounds mb-2">
+              <span>Roundas Faltantes:</span>
+              <span id="round">0</span>
+            </div>
+            <div id="command" class="mb-2">Preparate!</div>
+            <div id="timer" class="timer">0:00</div>
+            <div class="buttons mt-3">
+              <button id="submit" class="btn btn-success">Comenzar</button>
+              <button id="pause" class="btn btn-warning">Pausar</button>
+              <button id="reset" class="btn btn-danger">Reiniciar</button>
+            </div>
+          </div>
+
+          <div class="input-control mt-3">
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="soundSwitch" checked>
+              <label class="custom-control-label" for="soundSwitch">Sonido</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

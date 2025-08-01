@@ -1,0 +1,43 @@
+body {
+  background: #f0f0f0;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+}
+@media (min-width: 1200px) {
+  .logo {
+    max-width: 100%;
+  }
+}
+
+
+
+.timer-container {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+#timer {
+  font-size: 92px; /* Increase font size for timer */
+  font-weight: bold; /* Bold font for better visibility */
+}
+
+#timer {
+  color: green; /* Por defecto, color verde */
+}
+
+.paused #timer {
+  color: yellow; /* Cuando el temporizador está pausado, color amarillo */
+}
+
+.finished #timer {
+  color: red; /* Cuando el temporizador ha terminado, color rojo */
+}
+
+.buttons button {
+  margin-right: 10px;
+}
+
